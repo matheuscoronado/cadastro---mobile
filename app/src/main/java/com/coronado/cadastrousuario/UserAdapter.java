@@ -14,7 +14,7 @@ import java.util.List;
 // Classe Adapter: Gerencia a criação e o preenchimento dos itens na RecyclerView
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     // Atributo privado que armazena a referencia dos dados que serão exibidos
-    private List<String> ListaUsuarios;
+    private List<String> listaUsuarios;
 
     // Construtor que permite que a MainActivity "entregue" a lista de dados para este Adapter
     public UserAdapter(List<String> lista){
@@ -32,4 +32,16 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         // Retorna uma nova instância da nossa classe interna ViewHolder com a view criada
         return new ViewHolder(view);
     }
+
+    // Metodo 2: Vincula os dados de um objeto de lista a uma linha especifica da tela
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position){
+        // Recupera os dados da lista de acordo com a posição que o Android está desenhando agora
+        String nome = listaUsuarios.get(position);
+
+        // Define o texto no componente visual que está guardado dentro do 'holder'
+        holder.tvNome.setText(nome);
+    }
+
+
 }
