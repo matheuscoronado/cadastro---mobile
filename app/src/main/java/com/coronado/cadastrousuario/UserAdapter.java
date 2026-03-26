@@ -29,5 +29,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         // Aqui usamos um layout padrão do android (simple_list_item_1) para facilitar
         View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent,false);
 
+        // Retorna uma nova instância da nossa classe interna ViewHolder com a view criada
+        return new ViewHolder(view);
     }
 }
