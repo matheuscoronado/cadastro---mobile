@@ -3,6 +3,7 @@ package com.coronado.cadastrousuario;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -48,6 +49,20 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     public int getItemCount(){
         // Se a lista existir, retorna o tamanho, se não, retorna zero
         return listaUsuarios != null ? listaUsuarios.size(): 0;
+    }
+
+    // Classe interna viewHolder: Servir para "segurar" as referências dos componentes de cada linha
+    // Evitar chamadas respectivas ao findviewById, melhorando a performance do RecycleView
+
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        // Referência para o textView da linha
+        TextView tvNome;
+
+        public ViewHolder(@NonNull View itemView){
+            super(itemView);
+            // Faz o mapeamento do ID do layout para o objeto java
+            // Android.R.id.text1 é o Id padrão do layout 'simple_list_item_1'
+        }
     }
 
 
