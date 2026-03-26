@@ -62,8 +62,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             super(itemView);
             // Faz o mapeamento do ID do layout para o objeto java
             // Android.R.id.text1 é o Id padrão do layout 'simple_list_item_1'
+            tvNome = itemView.findViewById(android.R.id.text1);
         }
     }
-
 
 }
