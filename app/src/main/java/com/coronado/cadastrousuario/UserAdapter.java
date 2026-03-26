@@ -1,5 +1,7 @@
 package com.coronado.cadastrousuario;
 
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -22,5 +24,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     // Metodo 1: Cria "do zero" o visual de uma linha da lista (+ViewHolder)
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
+        // LayoutInflater transforma o arquivo XML em um objeto View Java
+        // Aqui usamos um layout padrão do android (simple_list_item_1) para facilitar
+        View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent,false);
+
+    }
 }
