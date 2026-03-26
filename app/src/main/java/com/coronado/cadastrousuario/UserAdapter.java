@@ -1,6 +1,11 @@
 package com.coronado.cadastrousuario;
 
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -11,6 +16,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     // Construtor que permite que a MainActivity "entregue" a lista de dados para este Adapter
     public UserAdapter(List<String> lista){
-        this.listaUsuarios = Lista;
+        this.listaUsuarios = lista;
     }
+
+    // Metodo 1: Cria "do zero" o visual de uma linha da lista (+ViewHolder)
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
 }
