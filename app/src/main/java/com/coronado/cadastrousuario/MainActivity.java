@@ -1,5 +1,6 @@
 package com.coronado.cadastrousuario;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -41,6 +42,20 @@ public class MainActivity extends AppCompatActivity {
 
         // Define o LayoutManager: organiza itens da lista em uma coluna vertical simples
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        // Instância o adaptador passando a nossa lista de nomes
+        adapter = new UserAdapter(listaNomes);
+
+        // Conecta o adaptador ao RecyclerView para que os dados sejam desenhados na tela
+        recyclerView.setAdapter(adapter);
+
+        // Mapeia o botão de cadastro
+        btnCadastrar = findViewById(R.id.btnCadastrar);
+
+        // Configura o evento de clique usando a expressão lambda (java 8+)
+        btnCadastrar.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, CreateUser.class));
+        });
     }
 
 
