@@ -1,5 +1,6 @@
 package com.coronado.cadastrousuario;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //  Metodo chamado sempre que e a tela volta a ficar visivil para o usuário
+    // @SuppressLint("NotifyDataSetChanged")
     @Override
     protected void onResume(){
         super.onResume();

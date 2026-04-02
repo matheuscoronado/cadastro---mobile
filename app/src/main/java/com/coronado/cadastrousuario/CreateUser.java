@@ -26,7 +26,7 @@ public class CreateUser extends AppCompatActivity {
             String nome = editNome.getText().toString();
             String email = editEmail.getText().toString();
 
-            if (!nome.isBlank()){
+            if (!nome.isEmpty()){
                 MainActivity.listaNomes.add(nome + "("+ email + ")");
                 finish();
             }

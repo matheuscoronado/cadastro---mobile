@@ -54,7 +54,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     // Classe interna viewHolder: Servir para "segurar" as referências dos componentes de cada linha
     // Evitar chamadas respectivas ao findviewById, melhorando a performance do RecycleView
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
         // Referência para o textView da linha
         TextView tvNome;
 
